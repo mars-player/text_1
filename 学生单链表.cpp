@@ -7,18 +7,18 @@ typedef struct node
 	struct node* next;
 }StudList;
 
-void CreateStudent(StudList*& sl)
+void CreateStudent(StudList*& sl) /*é‡‡ç”¨å°¾æ’æ³•åˆ›å»ºå­¦ç”Ÿå•é“¾è¡¨*/
 {
 	int n, i;
 	StudList* s, * tc;
 	sl = (StudList*)malloc(sizeof(StudList));
 	tc = sl;
-	printf("	Ñ§ÉúÈËÊı:");
+	printf("	å­¦ç”Ÿäººæ•°:");
 	scanf("%d", &n);
 	for (i = 0; i < n; i++)
 	{
 		s = (StudList*)malloc(sizeof(StudList));
-		printf("	µÚ%d¸öÑ§ÉúĞÕÃûºÍ³É¼¨:", i + 1);
+		printf("	ç¬¬%dä¸ªå­¦ç”Ÿå§“åå’Œæˆç»©:", i + 1);
 		scanf("%s", s->name);
 		scanf("%d", &s->score);
 		tc->next = s;
@@ -27,7 +27,7 @@ void CreateStudent(StudList*& sl)
 	tc->next = NULL;
 }
 
-void DestroyList(StudList*& L)
+void DestroyList(StudList*& L) /*é”€æ¯å­¦ç”Ÿå•é“¾è¡¨*/
 {
 	StudList* pre = L, * p = pre->next;
 	while (p != NULL)
@@ -38,11 +38,11 @@ void DestroyList(StudList*& L)
 	free(pre);
 }
 
-void DispList(StudList* L)
+void DispList(StudList* L) /*è¾“å‡ºå­¦ç”Ÿå•é“¾è¡¨*/
 {
 	StudList* p = L->next;
 	int i = 1;
-	printf("	Ãû´Î	ĞÕÃû	³É¼¨\n");
+	printf("	åæ¬¡	å§“å	æˆç»©\n");
 	while (p != NULL)
 	{
 		printf("	%d\t", i++);
@@ -52,7 +52,7 @@ void DispList(StudList* L)
 	}
 }
 
-void SortList(StudList*& L)
+void SortList(StudList*& L) /*å­¦ç”Ÿå•é“¾è¡¨æŒ‰æˆç»©é€’å‡æ’åº*/
 {
 	StudList* p, * pre, * q;
 	p = L->next ->next;
@@ -72,10 +72,10 @@ void SortList(StudList*& L)
 int main()
 {
 	StudList* st;
-	printf("(1)½¨Á¢Ñ§Éúµ¥Á´±í\n");
+	printf("(1)å»ºç«‹å­¦ç”Ÿå•é“¾è¡¨\n");
 	CreateStudent(st);
-	printf("(2)°´³É¼¨µİ¼õÅÅĞò\n");
+	printf("(2)æŒ‰æˆç»©é€’å‡æ’åº\n");
 	SortList(st);
-	printf("(3)ÅÅĞòºóµÄ½á¹û\n"); DispList(st);
-	printf("(4)Ïú»ÙÑ§Éúµ¥Á´±í\n"); DestroyList(st);
+	printf("(3)æ’åºåçš„ç»“æœ\n"); DispList(st);
+	printf("(4)é”€æ¯å­¦ç”Ÿå•é“¾è¡¨\n"); DestroyList(st);
 }
