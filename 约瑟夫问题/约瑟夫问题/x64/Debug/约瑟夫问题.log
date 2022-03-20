@@ -1,0 +1,3 @@
+﻿  源.cpp
+G:\c code\project_data_structure\约瑟夫问题\约瑟夫问题\源.cpp(46,1): warning C4326: “main”的返回类型应为“int”而非“void”
+  约瑟夫问题.vcxproj -> G:\c code\project_data_structure\约瑟夫问题\x64\Debug\约瑟夫问题.exe
