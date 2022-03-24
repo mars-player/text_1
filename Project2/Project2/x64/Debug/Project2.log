@@ -1,0 +1,4 @@
+﻿  标头.cpp
+G:\c code\project_data_structure\Project2\Project2\标头.cpp(13,16): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+G:\c code\project_data_structure\Project2\Project2\标头.cpp(73,33): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Project2.vcxproj -> G:\c code\project_data_structure\Project2\x64\Debug\Project2.exe
