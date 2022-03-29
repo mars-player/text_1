@@ -1,0 +1,4 @@
+﻿  源.cpp
+G:\c code\project_data_structure\Project10\Project10\源.cpp(13,5): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+G:\c code\project_data_structure\Project10\x64\Debug\Project10.exe : fatal error LNK1120: 1 个无法解析的外部命令
