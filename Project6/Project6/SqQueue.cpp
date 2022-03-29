@@ -1,6 +1,6 @@
-#include "±êÍ·.h"
+#include "æ ‡å¤´.h"
 #include <stdio.h>
-void InitQueue(SqQueue& sq) /*³õÊ¼»¯¶ÓÁĞÔËËã*/
+void InitQueue(SqQueue& sq) /*åˆå§‹åŒ–é˜Ÿåˆ—è¿ç®—*/
 {
 	sq.rear = sq.front = 0;
 }
@@ -8,7 +8,7 @@ void InitQueue(SqQueue& sq) /*³õÊ¼»¯¶ÓÁĞÔËËã*/
 void DestroyQueue(SqQueue sq)
 {}
 
-int DeQueue(SqQueue& sq, ElemType& x) /*³ö¶ÓÔËËã*/
+int DeQueue(SqQueue& sq, ElemType& x) /*å‡ºé˜Ÿè¿ç®—*/
 {
 	if (sq.rear == sq.front)
 		return 0;
@@ -17,7 +17,7 @@ int DeQueue(SqQueue& sq, ElemType& x) /*³ö¶ÓÔËËã*/
 	return 1;
 }
 
-int EnQueue(SqQueue& sq, ElemType x) /*½ø¶ÓÔËËã*/
+int EnQueue(SqQueue& sq, ElemType x) /*è¿›é˜Ÿè¿ç®—*/
 {
 	if ((sq.rear + 1) % MaxSize == sq.front)
 		return 0;
@@ -26,7 +26,7 @@ int EnQueue(SqQueue& sq, ElemType x) /*½ø¶ÓÔËËã*/
 	return 1;
 }
 
-int GetHead(SqQueue sq, ElemType& x) /*È¡¶ÓÍ·ÔªËØËã·¨*/
+int GetHead(SqQueue sq, ElemType& x) /*å–é˜Ÿå¤´å…ƒç´ ç®—æ³•*/
 {
 	if (sq.rear = sq.front)
 		return 0;
@@ -34,7 +34,12 @@ int GetHead(SqQueue sq, ElemType& x) /*È¡¶ÓÍ·ÔªËØËã·¨*/
 		return 1;
 }
 
-int QueueEmpty(SqQueue sq) /*ÅĞ¶Ï¶Ó¿ÕÔËËã*/
+int Count(SqQueue sq) /*æ±‚é˜Ÿåˆ—ä¸­å…ƒç´ ä¸ªæ•°*/
+{
+	return(sq.rear - sq.front + MaxSize) % MaxSize;
+}
+
+int QueueEmpty(SqQueue sq) /*åˆ¤æ–­é˜Ÿç©ºè¿ç®—*/
 {
 	if (sq.rear == sq.front) return 1;
 	else return 0;
