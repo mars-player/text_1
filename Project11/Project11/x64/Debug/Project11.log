@@ -1,0 +1,51 @@
+﻿  源.cpp
+G:\c code\project_data_structure\Project11\Project11\源.cpp(6,7): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+G:\c code\project_data_structure\Project11\Project11\源.cpp(6,7): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+G:\c code\project_data_structure\Project11\Project11\源.cpp(6,14): error C2238: 意外的标记位于“;”之前
+G:\c code\project_data_structure\Project11\Project11\源.cpp(7,7): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+G:\c code\project_data_structure\Project11\Project11\源.cpp(7,7): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+G:\c code\project_data_structure\Project11\Project11\源.cpp(7,13): error C2238: 意外的标记位于“;”之前
+G:\c code\project_data_structure\Project11\Project11\源.cpp(19,6): error C2039: "rear": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(19,17): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(25,19): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(28,17): error C2039: "rear": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(50,10): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(51,7): error C2039: "rear": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(51,18): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(54,7): error C2039: "rear": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(55,7): error C2039: "rear": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(49,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\c code\project_data_structure\Project11\Project11\源.cpp(63,10): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(65,10): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(67,10): error C2039: "rear": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(67,22): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(68,7): error C2039: "rear": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(68,18): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(70,7): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(70,19): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(66,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+G:\c code\project_data_structure\Project11\Project11\源.cpp(78,10): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(89,11): error C2039: "front": 不是 "LQueue" 的成员
+G:\c code\project_data_structure\Project11\Project11\源.cpp(5): message : 参见“LQueue”的声明
+G:\c code\project_data_structure\Project11\Project11\源.cpp(120,12): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+G:\c code\project_data_structure\Project11\Project11\源.cpp(120,12): message : 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+G:\c code\project_data_structure\Project11\Project11\源.cpp(120,12): message : 缺失的可变参数 2 为格式字符串“%s”所需
+G:\c code\project_data_structure\Project11\Project11\源.cpp(120,12): message : 此参数用作缓冲区大小
