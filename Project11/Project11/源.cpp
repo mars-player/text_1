@@ -1,22 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <malloc.h>
-#include <string.h>
-typedef struct
-{
-	QType* front; //指向队头病人结点
-	QType* rear;  //指向队尾结点
-}LQueue;          //病人链队类型
+#include <cstring>
 typedef struct Lnode
 {
 	char data[10]; //存放患者姓名
 	struct Lnode* next; //指针域
 }QType;            //链队中结点类型
+typedef struct
+{
+	QType* front; //指向队头病人结点
+	QType* rear;  //指向队尾结点
+}LQueue;          //病人链队类型
+
 
 //----初始化队列运算算法----
 void InitQueue(LQueue*& lq)
 {
 	lq = (LQueue*)malloc(sizeof(LQueue*));
-	lq->rear = lq->front = NULL; //初始时队头和队尾指针均为空
+	lq->rear = lq->front = NULL;//初始时队头和队尾指针均为空
 }
 
 //----销毁链表----
@@ -117,7 +119,7 @@ int main(void)
 			break;
 		case 1:
 			printf("	>>输入患者姓名:");
-			scanf_s("%s", name);
+			scanf("%s", name);
 			EnQueue(lq, name);
 			break;
 		case 2:
@@ -131,6 +133,7 @@ int main(void)
 			if (!DispQueue(lq))
 				printf("	>>没有排队的患者\n");
 			break;
+		default: break;
 		}
 	}
 }
