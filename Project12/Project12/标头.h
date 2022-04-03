@@ -17,3 +17,5 @@ int InsStr(SqString& s, int i, SqString t);
 int DelStr(SqString& s, int i, int j);
 SqString RepStrAll(SqString s, SqString sl, SqString s2);
 void DispStr(SqString s);
+int Strcmp(SqString s, SqString t);
+int Count(SqString s, SqString t);
