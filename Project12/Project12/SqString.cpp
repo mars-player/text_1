@@ -159,7 +159,7 @@ int Strcmp(SqString s, SqString t) //以字典顺序比较两个英文字母串s
 	else return -1;  //s < t
 }
 			 
-int Count(SqString s, SqString t){
+int Count(SqString s, SqString t){ //求串t在串s中出现的次数
 	int num = 0, i, j, k;      //i和j分别扫描主串s和子串t
 	i = 0;
 	while (i <= s.length - t.length)
