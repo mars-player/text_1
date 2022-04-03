@@ -1,6 +1,6 @@
-#include "±êÍ·.h"
+#include "æ ‡å¤´.h"
 #include <stdio.h>
-void Assign(SqString& s, char str[]) //´®¸³ÖµÔËËãËã·¨
+void Assign(SqString& s, char str[]) //ä¸²èµ‹å€¼è¿ç®—ç®—æ³•
 {
 	int i = 0;
 	while (str[i] != '\0')
@@ -11,10 +11,10 @@ void Assign(SqString& s, char str[]) //´®¸³ÖµÔËËãËã·¨
 	s.length = i;
 }
 
-void DestroyStr(SqString s) //Ïú»Ù´®ÔËËã
+void DestroyStr(SqString s) //é”€æ¯ä¸²è¿ç®—
 {}
 
-void StrCopy(SqString& s, SqString t) //´®¸´ÖÆÔËËã
+void StrCopy(SqString& s, SqString t) //ä¸²å¤åˆ¶è¿ç®—
 {
 	int i;
 	for (i = 0; i < t.length; i++)
@@ -22,43 +22,43 @@ void StrCopy(SqString& s, SqString t) //´®¸´ÖÆÔËËã
 	s.length = t.length;
 }
 
-int StrLength(SqString s) //Çó´®³¤ÔËËã
+int StrLength(SqString s) //æ±‚ä¸²é•¿è¿ç®—
 {
 	return(s.length);
 }
 
-int StrEqual(SqString s, SqString t) //ÅĞ¶Ï´®ÏàµÈÔªËØ
+int StrEqual(SqString s, SqString t) //åˆ¤æ–­ä¸²ç›¸ç­‰å…ƒç´ 
 {
 	int i = 0;
 	if (s.length != t.length)
-		return 0;                    //´®³¤²»Í¬Ê±·µ»Ø0
+		return 0;                    //ä¸²é•¿ä¸åŒæ—¶è¿”å›0
 	else
 	{
 		for (i = 0; i < s.length; i++)
-			if (s.data[i] != t.data[i]) //ÓĞÒ»¸ö¶ÔÓ¦×Ö·û²»Í¬Ê±·µ»Ø0
+			if (s.data[i] != t.data[i]) //æœ‰ä¸€ä¸ªå¯¹åº”å­—ç¬¦ä¸åŒæ—¶è¿”å›0
 				return 0;
 		return 1;
 	}
 }
 
-SqString Concat(SqString s, SqString t) //´®Á¬½ÓÔËËã
+SqString Concat(SqString s, SqString t) //ä¸²è¿æ¥è¿ç®—
 {
 	SqString r;
 	int i, j;
-	for (i = 0; i < s.length; i++)  //½«s¸´ÖÆµ½r
+	for (i = 0; i < s.length; i++)  //å°†så¤åˆ¶åˆ°r
 		r.data[i] = s.data[i];
-	for (j = 0; j < t.length; j++)  //½«t¸´ÖÆµ½r
+	for (j = 0; j < t.length; j++)  //å°†tå¤åˆ¶åˆ°r
 		r.data[s.length + j] = t.data[j];
 	r.length = i + j; 
-	return r;                       //¸´ÖÆr
+	return r;                       //å¤åˆ¶r
 }
 
-SqString SubStr(SqString s, int i, int j) //Çó×Ó´®ÔËËã
+SqString SubStr(SqString s, int i, int j) //æ±‚å­ä¸²è¿ç®—
 {
 	SqString t;
 	int k;
 	if (i < 1 || i > s.length || j < 1 || i + j > s.length + 1)
-		t.length = 0;                     //²ÎÊı´íÎóÊ±·µ»Ø¿Õ´®
+		t.length = 0;                     //å‚æ•°é”™è¯¯æ—¶è¿”å›ç©ºä¸²
 	else
 	{
 		for (k = i - 1; k < i + j - 1; k++)
@@ -68,66 +68,66 @@ SqString SubStr(SqString s, int i, int j) //Çó×Ó´®ÔËËã
 	return t;
 }
  
-int Index(SqString s, SqString t) //²éÕÒ×Ó´®Î»ÖÃÔËËãËã·¨
+int Index(SqString s, SqString t) //æŸ¥æ‰¾å­ä¸²ä½ç½®è¿ç®—ç®—æ³•
 {
-	int i = 0, j = 0;  //iºÍj·Ö±ğÉ¨ÃèÖ÷´®sºÍ×Ó´®t
-	while (i < s.length && j < t.length) //Á½¸ö´®¶¼Ã»ÓĞÉ¨ÃèÍê
+	int i = 0, j = 0;  //iå’Œjåˆ†åˆ«æ‰«æä¸»ä¸²så’Œå­ä¸²t
+	while (i < s.length && j < t.length) //ä¸¤ä¸ªä¸²éƒ½æ²¡æœ‰æ‰«æå®Œ
 	{
-		if (s.data[i] == t.data[j])  //¶ÔÓ¦×Ö·ûÏàÍ¬Ê±£¬¼ÌĞø±È½ÏÏÂÒ»¶Ô×Ö·û
+		if (s.data[i] == t.data[j])  //å¯¹åº”å­—ç¬¦ç›¸åŒæ—¶ï¼Œç»§ç»­æ¯”è¾ƒä¸‹ä¸€å¯¹å­—ç¬¦
 		{
 			i++;
 			j++;
 		}
-		else   //·ñÔò£¬Ö÷´®Ö¸Õë»ØËİÖØĞÂ¿ªÊ¼ÏÂÒ»´ÎÆ¥Åä
+		else   //å¦åˆ™ï¼Œä¸»ä¸²æŒ‡é’ˆå›æº¯é‡æ–°å¼€å§‹ä¸‹ä¸€æ¬¡åŒ¹é…
 		{
-			i = i - j + 1;  //i»ØÍËµ½Ô­iµÄÏÂÒ»¸öÎ»ÖÃ
-			j = 0;          //j´ÓtµÄµÚÒ»¸ö×Ö·û¿ªÊ¼
+			i = i - j + 1;  //iå›é€€åˆ°åŸiçš„ä¸‹ä¸€ä¸ªä½ç½®
+			j = 0;          //jä»tçš„ç¬¬ä¸€ä¸ªå­—ç¬¦å¼€å§‹
 		}
 	}
-	if (j >= t.length)  //tµÄ×Ö·ûÉ¨ÃèÍê£¬±íÊ¾tÊÇsµÄ×Ó´®
-		return i - t.length + 1;  //·µ»ØtµÄµÚÒ»¸ö×Ö·ûÔÚsÖĞµÄÎ»ÖÃ
+	if (j >= t.length)  //tçš„å­—ç¬¦æ‰«æå®Œï¼Œè¡¨ç¤ºtæ˜¯sçš„å­ä¸²
+		return i - t.length + 1;  //è¿”å›tçš„ç¬¬ä¸€ä¸ªå­—ç¬¦åœ¨sä¸­çš„ä½ç½®
 	else
-		return 0;  //·µ»Ø0
+		return 0;  //è¿”å›0
 }
 
-int InsStr(SqString& s, int i, SqString t) //×Ó´®²åÈëÔËËã
+int InsStr(SqString& s, int i, SqString t) //å­ä¸²æ’å…¥è¿ç®—
 {
 	int j;
 	if (i < 1 || i > s.length + 1)
-		return 0;   //Î»ÖÃ²ÎÊı´íÎó·µ»Ø0
+		return 0;   //ä½ç½®å‚æ•°é”™è¯¯è¿”å›0
 	else
 	{
-		for (j = s.length - 1; j >= i - 1; j--) //½«s.data[i-1]..s.length-1]
-			s.data[j + t.length] = s.data[j];  //ºóÒÆt.length¸öÎ»ÖÃ
-	 	for (j = 0; j < t.length; j++) //²åÈë×Ó´®t
+		for (j = s.length - 1; j >= i - 1; j--) //å°†s.data[i-1]..s.length-1]
+			s.data[j + t.length] = s.data[j];  //åç§»t.lengthä¸ªä½ç½®
+	 	for (j = 0; j < t.length; j++) //æ’å…¥å­ä¸²t
 			s.data[i + j - 1] = t.data[j]; 
-		s.length = s.length + t.length; //ĞŞ¸Äs´®³¤¶È
-		return 1;  //³É¹¦²åÈë·µ»Ø1
+		s.length = s.length + t.length; //ä¿®æ”¹sä¸²é•¿åº¦
+		return 1;  //æˆåŠŸæ’å…¥è¿”å›1
 	}
 }
 
-int DelStr(SqString& s, int i, int j) //×Ó´®É¾³ıÔËËãËã·¨
+int DelStr(SqString& s, int i, int j) //å­ä¸²åˆ é™¤è¿ç®—ç®—æ³•
 {
 	int k;
 	if (i < 1 || i > s.length || j < 1 || i + j > s.length + 1)
-		return 0;  //Î»ÖÃ²ÎÊı´íÎó
+		return 0;  //ä½ç½®å‚æ•°é”™è¯¯
 	else
 	{
-		for (k = i + j - 1; k < s.length; k++) //½«sµÄµÚi+jÎ»ÖÃÖ®ºóµÄ×Ö·ûÇ°ÒÆjÎ»
+		for (k = i + j - 1; k < s.length; k++) //å°†sçš„ç¬¬i+jä½ç½®ä¹‹åçš„å­—ç¬¦å‰ç§»jä½
 			s.data[k - j] = s.data[k];
-		s.length = s.length - j; //ĞŞ¸ÄsµÄ³¤¶È
-		return 1; //³É¹¦É¾³ı·µ»Ø1
+		s.length = s.length - j; //ä¿®æ”¹sçš„é•¿åº¦
+		return 1; //æˆåŠŸåˆ é™¤è¿”å›1
 	}
 }
 
-SqString RepStrAll(SqString s, SqString s1, SqString s2) //×Ó´®Ìæ»»ÔËËã
+SqString RepStrAll(SqString s, SqString s1, SqString s2) //å­ä¸²æ›¿æ¢è¿ç®—
 {
 	int i;
 	i = Index(s, s1);
 	while (i > 0)
 	{
-		DelStr(s, i, s1.length); //´ÓsÖĞÉ¾³ı×Ó´®s1
-		InsStr(s, i, s2); //ÔÚsÖĞ²åÈë×Ó´®s2
+		DelStr(s, i, s1.length); //ä»sä¸­åˆ é™¤å­ä¸²s1
+		InsStr(s, i, s2); //åœ¨sä¸­æ’å…¥å­ä¸²s2
 		i = Index(s, s1);
 	}
 	return s;
@@ -141,3 +141,38 @@ void DispStr(SqString s)
 	printf("\n");
 }
 
+int Strcmp(SqString s, SqString t) //ä»¥å­—å…¸é¡ºåºæ¯”è¾ƒä¸¤ä¸ªè‹±æ–‡å­—æ¯ä¸²så’Œtçš„å¤§å°ï¼Œä¸¤ä¸ªä¸²å‡ä»¥é¡ºåºä¸²å­˜å‚¨
+{
+	int i, comlen;
+	if (s.length < t.length)
+		comlen = s.length;  //æ±‚så’Œtçš„å…±åŒé•¿åº¦
+	else comlen = t.length;
+	for (i = 0; i < comlen; i++)  //åœ¨å…±åŒé•¿åº¦å†…é€ä¸ªå­—ç¬¦æ¯”è¾ƒ
+		if (s.data[i] > t.data[i]
+		    return 1;
+		else if (s.data[i] < t.data[i]
+	            return -1;
+	if (s.length == t.length)  //s == t
+	        return 0;
+	else if(s.length > t.length)  //s > t
+		return 1;
+	else return -1;  //s < t
+}
+			 
+int Count(SqString s, SqString t){
+	int num = 0, i, j, k;      //iå’Œjåˆ†åˆ«æ‰«æä¸»ä¸²så’Œå­ä¸²t
+	i = 0;
+	while (i <= s.length - t.length)
+	{
+		for (k = i, j = 0; j < t.length && s.data[k] == t.data[j]; k++, j++);
+		if (j == t.length)    //jç­‰äºå­ä¸²tçš„é•¿åº¦
+		{
+			num++;        //æ‰¾åˆ°ä¸€ä¸ªå­ä¸²
+			i += t.length; //iè·³è¿‡t.lengthä¸ªå­—ç¬¦
+		}
+		else i++;             //iåç§»ä¸€ä¸ªå­—ç¬¦
+	}
+	return(num);
+}
+			 
+			 
